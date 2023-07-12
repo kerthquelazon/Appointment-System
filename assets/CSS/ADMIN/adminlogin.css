@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+body {
+  background: #000;
+  color: #fff;
+}
+section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+header {
+  position: relative;
+  background-image: url(../images/building.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 98%;
+  height: 95%;
+  right: 20px;
+  left: 20px;
+  top: 20px;
+  bottom: 20px;
+  border-radius: 30px;
+}
+.main {
+  position: absolute;
+  width: 35%;
+  height: 100%;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0 30px 30px 0;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.main img {
+  width: 220px;
+  top: 70px;
+  position: absolute;
+}
+.main h2 {
+  font-weight: 500;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: -100px;
+}
+.admins {
+  position: absolute;
+  display: flex;
+  line-height: none;
+  flex-direction: column;
+  width: 60%;
+  margin-top: 200px;
+}
+.admins label {
+  font-size: 20px;
+  font-weight: 300;
+  margin-left: 10px;
+}
+
+.admins input {
+  border-radius: 20px;
+  height: 50px;
+  border: none;
+  font-size: 20px;
+  font-weight: 400;
+  padding-left: 10px;
+}
+.admins input:hover {
+  border: 3px solid #000;
+}
+.admins .adm {
+  border-radius: 20px;
+  height: 50px;
+  border: none;
+  font-size: 25px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+  background: red;
+}
+.adm:hover {
+  transform: scale(105%);
+}
+.admi {
+  transition: ease-in-out 0.3s;
+  position: absolute;
+  bottom: 15%;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 400;
+  color: #fff;
+}
+.admi:hover {
+  text-decoration: underline;
+  font-size: 27px;
+}

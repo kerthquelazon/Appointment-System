@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --dark1: #000;
+  --light1: #fefefe;
+  --dark2: #11101b;
+  --light2: #fff;
+  --col: #478cff;
+  --grey: #eee;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+img{
+  width: 100%;
+}
+body{
+  background: var(--grey);
+  overflow-x: hidden;
+}
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 270px;
+  height: 100%;
+  background: var(--col);
+  z-index: 1;
+  transition: 0.3s ease;
+  scrollbar-width: none;
+  overflow-x: hidden;
+}
+#sidebar .menu {
+  color: #fff;
+  margin-top: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+#sidebar .menu a {
+  padding: 8px 8px 8px 32px;
+  color: var(--light1);
+  display: block;
+  transition: 0.3s;
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  overflow-x: hidden;
+  text-decoration: none;
+}
+#sidebar .menu a.active{
+  background: var(--dark1);
+  color: var(--light1);
+}
+#sidebar .menu a:hover{
+  color: var(--light1);
+  background: var(--dark1);
+}
+#sidebar .menu a span{
+  vertical-align: middle;
+  font-size: 22px;
+  margin-right: 2px;
+}
+#sidebar::--webkit-scrollbar {
+  display: none;
+}
+#sidebar.hide {
+  width: 0;
+}
+/* CONTENT */
+#content {
+  position: relative;
+  width: 100%;
+  left: 270px;
+  transition: 0.3s ease;
+  background: var(--grey);
+  height: 100vh;
+}
+#sidebar.hide ~ #content {
+  width: calc(100% - 0);
+  left: 0;
+}
+
+#content nav{
+  height: 80px;
+  background: var(--light2);
+  padding: 0 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  grid-gap: 24px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+#content nav i{
+  font-size: 35px;
+}
+#content nav img{
+  width: 70px;
+}
+#content nav .nav-link{
+  font-size: 25px;
+  font-weight: 500;
+  color: red;
+}
+#content nav .nav-link:hover{
+  color: var(--col);
+}
+#content main{
+  width: 100%;
+  overflow-y: auto;
+}
+
+
+
+
+
+
+
+
+/* MOBILE RESPONSIVE */
+@media screen and (max-width:700px){
+  #content main .container::--webkit-scrollbar{
+    display: none;
+  }
+  #content nav a.nav-link{
+    font-size: 15px;
+    width: 50%;
+  }
+}
